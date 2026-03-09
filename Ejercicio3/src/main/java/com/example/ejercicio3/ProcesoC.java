@@ -1,6 +1,7 @@
 package com.example.ejercicio3;
 
 import jakarta.annotation.Priority;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.stereotype.Component;
 
@@ -9,7 +10,7 @@ import org.springframework.stereotype.Component;
 public class ProcesoC implements CommandLineRunner {
     private MessageService messageService;
 
-    public ProcesoC(MessageService messageService) {
+    public ProcesoC(@Qualifier("systemErrMessageService") MessageService messageService) {
         this.messageService = messageService;
     }
 

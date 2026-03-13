@@ -10,7 +10,7 @@ import org.springframework.stereotype.Component;
 public class ProcesoA implements CommandLineRunner {
     private MessageService messageService;
 
-    public ProcesoA(@Qualifier("systemErrMessageService") MessageService messageService) {
+    public ProcesoA(MessageService messageService) {
         this.messageService = messageService;
     }
 

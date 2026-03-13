@@ -10,7 +10,7 @@ import org.springframework.stereotype.Component;
 public class ProcesoC implements CommandLineRunner {
     private MessageService messageService;
 
-    public ProcesoC(@Qualifier("systemErrMessageService") MessageService messageService) {
+    public ProcesoC(MessageService messageService) {
         this.messageService = messageService;
     }
 

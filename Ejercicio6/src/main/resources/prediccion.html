@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Prediccion Tiempo</title>
+</head>
+<body>
+    <h1>Predicción meteorológica</h1>
+    <table>
+        <tr>
+            <th>Fecha</th>
+            <td th:each="dia : ${dias}" th:text="${dia.fecha}"></td>
+        </tr>
+        <tr>
+            <th>Lluvia</th>
+            <td th:each="dia : ${dias}" th:text="${dia.probabilidadPrecipitacion}"></td>
+        </tr>
+        <tr>
+            <th>Temperatura mínima</th>
+            <td th:each="dia : ${dias}" th:text="${dia.temperaturaMinima}"></td>
+        </tr>
+        <tr>
+            <th>Temperatura máxima</th>
+            <td th:each="dia : ${dias}" th:text="${dia.temperaturaMaxima}"></td>
+        </tr>
+        <tr>
+            <th>Nivel UV</th>
+            <td th:each="dia : ${dias}" th:text="${dia.nivelUV}"></td>
+        </tr>
+    </table>
+</body>
+</html>
